@@ -10,7 +10,9 @@ function writeNextWord() {
 	writingIndex = 0;
 	writeWord();
 	topicIndex++;
-	if(topicIndex >= topics.length) topicIndex = 0;
+	if(topicIndex >= topics.length) break ;
+	
+//	topicIndex = 0
 }
 
 function writeWord() {

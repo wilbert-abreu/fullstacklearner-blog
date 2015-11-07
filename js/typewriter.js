@@ -15,12 +15,12 @@ function writeNextWord() {
 
 function writeWord() {
 	writingIndex++;
-	if(writingIndex > topics[topicIndex].length) return setTimeout(removeWord, 1500);
+	if(writingIndex > topics[topicIndex].length) return setTimeout(removeWord, 2000);
 
 	var part = topics[topicIndex].substr(0, writingIndex);
 	$('.typing').text(part);
 
-	setTimeout(writeWord, 100);
+	setTimeout(writeWord, 200);
 }
 
 function removeWord() {
@@ -28,7 +28,7 @@ function removeWord() {
 	var newText = text.substr(0, (text.length - 1))
 	$('.typing').text(newText);
 
-	if(newText.length <= 0) return setTimeout(writeNextWord, 100);
-	setTimeout(removeWord, 100);
+	if(newText.length <= 0) return setTimeout(writeNextWord, 200);
+	setTimeout(removeWord, 200);
 }
 

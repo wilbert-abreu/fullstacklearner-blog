@@ -1,4 +1,4 @@
-var topics = ['Learner', 'Growth Hacker', 'Web Developer', 'Data Analyst'];
+var topics = ['Web Developer','Marketer','Learner',];
 var topicIndex = 0;
 var writingIndex = 0;
 

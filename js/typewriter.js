@@ -3,16 +3,14 @@ var topicIndex = 0;
 var writingIndex = 0;
 
 $(document).ready(function() {
-	writeNextWord();
+	if (topicIndex < topics.length - 1) writeNextWord();
 });
 
 function writeNextWord() {
 	writingIndex = 0;
 	writeWord();
 	topicIndex++;
-	if(topicIndex >= topics.length) break ;
-	
-//	topicIndex = 0
+	if(topicIndex >= topics.length) topicIndex = 0;
 }
 
 function writeWord() {

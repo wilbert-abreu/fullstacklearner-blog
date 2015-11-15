@@ -1,34 +1,51 @@
-var topics = ['Web Developer','Marketer','Learner',];
-var topicIndex = 0;
-var writingIndex = 0;
+var topics = ['Placeholder','Developer','Marketer','Learner'], topicIndex = 0, writingIndex = 0;
 
 $(document).ready(function() {
-	if (topicIndex < topics.length - 1) writeNextWord();
+    writeNextWord();
+ 
 });
 
+//selects the next word in array to write
 function writeNextWord() {
 	writingIndex = 0;
+	if(topicIndex == topics.length -1)  return;
 	writeWord();
 	topicIndex++;
-	if(topicIndex >= topics.length) topicIndex = 0;
+	if(topicIndex >= topics.length) topicIndex = 1;
+    
+   
 }
 
+//writes each letter of word
 function writeWord() {
+	//go to next letter
 	writingIndex++;
-	if(writingIndex > topics[topicIndex].length) return setTimeout(removeWord, 2000);
-
+	
+	//after last letter, remove the word
+	if(writingIndex > topics[topicIndex].length) return setTimeout(removeWord, 1500);
+	
+	//applies typing effect
 	var part = topics[topicIndex].substr(0, writingIndex);
 	$('.typing').text(part);
-
-	setTimeout(writeWord, 200);
+	
+	//speed the next letter is typed
+	setTimeout(writeWord, 250);
 }
 
 function removeWord() {
+    if(topicIndex == topics.length -1)  return;
+	//grab word 
 	var text = $('.typing').text();
-	var newText = text.substr(0, (text.length - 1))
+	
+	//applies backspace effect
+	var newText = text.substr(0, (text.length - 1));
 	$('.typing').text(newText);
 
-	if(newText.length <= 0) return setTimeout(writeNextWord, 200);
-	setTimeout(removeWord, 200);
+	//once the word is deleted, write next word in array
+	if(newText.length <= 0 ) return setTimeout(writeNextWord, 250);
+	
+	//remove the next letter
+	setTimeout(removeWord, 250);
 }
 
+$('.typing').after('<span class=\'blinking\'>|</span>');

@@ -1,0 +1,12 @@
+span.blinking {
+    animation: blinking 2s steps(1, start) infinite;
+    -webkit-animation: blinking 2s steps(5, start) infinite;
+}
+
+@keyframes blinking {
+    to { visibility: hidden; }
+}
+
+@-webkit-keyframes blinking {
+    to { visibility: hidden; }
+}

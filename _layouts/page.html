@@ -8,9 +8,11 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1 >{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if page.typewriter %}<br><span class="{{ page.class }}">{{ page.typewriter }}</span>{% endif %}</h1>
+                    <h1 >{% if page.title %}{{ page.title }}{% else %}{% if page.home_title %}{{ page.home_title }}{% endif %}{% endif %}{% if page.typewriter %}<br><span class="{{ page.class }}">{{ page.typewriter }}</span>{% endif %}</h1>
+                    {% if page.description %}
                     <hr class="small">
                     <span class="subheading">{{ page.description }}</span>
+                    {% endif %}
                 </div>
             </div>
         </div>

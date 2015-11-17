@@ -2,7 +2,7 @@
 layout:     post
 title:      "Full Stack Learner"
 subtitle:   "First Post"
-date:       2015-08-20 12:00:00
+date:       2015-11-16 12:00:00
 author:     "Wilbert Abreu"
 header-img: "img/post-bg-01.jpg"
 ---

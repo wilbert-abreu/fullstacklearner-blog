@@ -29,7 +29,7 @@ function writeWord() {
 	$('.typing').text(part);
 	
 	//speed the next letter is typed
-	setTimeout(writeWord, 250);
+	setTimeout(writeWord, 100);
 }
 
 function removeWord() {
@@ -42,10 +42,10 @@ function removeWord() {
 	$('.typing').text(newText);
 
 	//once the word is deleted, write next word in array
-	if(newText.length <= 0 ) return setTimeout(writeNextWord, 250);
+	if(newText.length <= 0 ) return setTimeout(writeNextWord, 450);
 	
 	//remove the next letter
-	setTimeout(removeWord, 250);
+	setTimeout(removeWord, 100);
 }
 
 $('.typing').after('<span class=\'blinking\'>|</span>');

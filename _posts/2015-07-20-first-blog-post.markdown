@@ -21,6 +21,7 @@ header-img: "img/post-bg-01.jpg"
 <a href="#">
     <img src="{{ site.baseurl }}/img/post-sample-image.jpg" alt="Post Sample Image">
 </a>
+
 <span class="caption text-muted">Full Stack Learner first blog post</span>
 
 <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
